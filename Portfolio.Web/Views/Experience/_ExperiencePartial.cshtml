@@ -1,0 +1,68 @@
+﻿@{
+    ViewData["Title"] = "My Experience";
+    var work = ViewBag.Work as List<Portfolio.Web.Models.Experience>;
+    var education = ViewBag.Education as List<Portfolio.Web.Models.Experience>;
+}
+
+<section class="section">
+    <div class="container">
+        <h2 class="fw-bold mb-4 text-center text-gradient">My Experience</h2>
+
+        <!-- Tabs -->
+        <ul class="nav nav-pills justify-content-center mb-4" id="expTabs" role="tablist">
+            <li class="nav-item">
+                <button class="nav-link active" id="work-tab" data-bs-toggle="pill" data-bs-target="#work" type="button" role="tab">
+                    <i class="bi bi-briefcase me-1"></i> Work Experience
+                </button>
+            </li>
+            <li class="nav-item">
+                <button class="nav-link" id="edu-tab" data-bs-toggle="pill" data-bs-target="#edu" type="button" role="tab">
+                    <i class="bi bi-mortarboard me-1"></i> Education
+                </button>
+            </li>
+        </ul>
+
+        <!-- Tab content -->
+        <div class="tab-content">
+            <!-- Work -->
+            <div class="tab-pane fade show active" id="work" role="tabpanel">
+                @if (work != null && work.Any())
+                {
+                    foreach (var item in work)
+                    {
+                        <div class="card shadow-sm mb-3 border-0 rounded-4 p-3" data-aos="fade-up">
+                            <h5 class="fw-bold">@item.Title</h5>
+                            <h6 class="text-primary">@item.CompanyOrSchool</h6>
+                            <small class="text-muted">@item.Duration</small>
+                            <p class="mt-2">@item.Description</p>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <p class="text-center text-muted mt-4">Chưa có kinh nghiệm làm việc</p>
+                }
+            </div>
+
+            <!-- Education -->
+            <div class="tab-pane fade" id="edu" role="tabpanel">
+                @if (education != null && education.Any())
+                {
+                    foreach (var item in education)
+                    {
+                        <div class="card shadow-sm mb-3 border-0 rounded-4 p-3" data-aos="fade-up">
+                            <h5 class="fw-bold">@item.Title</h5>
+                            <h6 class="text-primary">@item.CompanyOrSchool</h6>
+                            <small class="text-muted">@item.Duration</small>
+                            <p class="mt-2">@item.Description</p>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <p class="text-center text-muted mt-4">Chưa có thông tin học vấn</p>
+                }
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,8 @@
+﻿@model Portfolio.Web.Models.ContactMessage
+
+@{
+    ViewData["Title"] = "Contact";
+}
+
+<!-- Nếu bạn dùng partial để hiển thị form -->
+@await Html.PartialAsync("_ContactPartial", Model)

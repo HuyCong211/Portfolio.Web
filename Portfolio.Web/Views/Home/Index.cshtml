@@ -1,0 +1,104 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<section class="hero d-flex align-items-center justify-content-center py-5">
+    <div class="container">
+        <div class="row align-items-center justify-content-between">
+            <!-- LEFT: text -->
+            <div class="col-lg-7" data-aos="fade-right">
+                <h1 class="fw-bold display-5 mb-3">
+                    Xin chào, 
+                    <br />
+                    Mình là <span class="text-gradient">Nguyễn Huy Công</span>
+                </h1>
+                <h4 id="typing" class="text-muted mb-3"></h4>
+                <p class="lead text-muted-2 mb-4">
+                    Mục tiêu: Trở thành lập trình viên web chuyên nghiệp, xây dựng ứng dụng
+                    <strong>.NET Core</strong> tối ưu, bảo mật và dễ mở rộng.
+                </p>
+
+                <div class="d-flex flex-wrap gap-3 mb-4 hero-cta">
+                    <a href="#projects" class="btn btn-dark-soft px-4 py-2">
+                        <i class="bi bi-eye me-1"></i> Xem dự án
+                    </a>
+                    <a href="#contact" class="btn btn-outline px-4 py-2">
+                        <i class="bi bi-envelope me-1"></i> Liên hệ
+                    </a>
+                </div>
+
+                <div class="tech-stack d-flex flex-wrap gap-4">
+                    <div class="tech"><i class="bi bi-dotnet"></i> .NET Core</div>
+                    <div class="tech"><i class="bi bi-code-slash"></i> ASP.NET MVC</div>
+                    <div class="tech"><i class="bi bi-database"></i> EF Core</div>
+                    <div class="tech"><i class="bi bi-server"></i> SQL Server</div>
+                </div>
+            </div>
+
+            <!-- RIGHT: profile image -->
+            <div class="col-lg-4 text-center" data-aos="fade-left">
+                <div class="profile-wrapper card-ui p-3 rounded-20 shadow-sm mx-auto" style="max-width:280px;">
+                    <img src="~/img/profile.jpg" alt="Profile"
+                         class="img-fluid rounded-20 shadow-sm" />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="section">
+    @await Html.PartialAsync("~/Views/About/_AboutPartial.cshtml", ViewData["Profile"])
+</section>
+
+<section id="experience" class="section bg-light">
+    @await Html.PartialAsync("~/Views/Experience/_ExperiencePartial.cshtml", ViewData["Experiences"])
+</section>
+
+<section id="projects" class="section">
+    @await Html.PartialAsync("~/Views/Projects/_ProjectsPartial.cshtml", ViewData["Projects"])
+</section>
+
+<section id="skills" class="section bg-light">
+    @await Html.PartialAsync("~/Views/Skills/_SkillsPartial.cshtml", new {
+    Technical = ViewData["TechnicalSkills"],
+        Soft = ViewData["SoftSkills"]
+        })
+</section>
+
+<section id="contact" class="section">
+    @await Html.PartialAsync("~/Views/Contact/_ContactPartial.cshtml")
+</section>
+
+@section Scripts {
+    <script>
+        const roles = [
+          "Web Developer (.NET Core)",
+          "Backend Engineer",
+          "Fullstack Developer",
+          "Freelancer"
+        ];
+        const el = document.getElementById("typing");
+        let roleIndex = 0, charIndex = 0, deleting = false;
+
+        function typeEffect() {
+          const current = roles[roleIndex];
+          if (!deleting && charIndex <= current.length) {
+            el.textContent = current.substring(0, charIndex++);
+            setTimeout(typeEffect, 90);
+          } else if (deleting && charIndex >= 0) {
+            el.textContent = current.substring(0, charIndex--);
+            setTimeout(typeEffect, 50);
+          } else {
+            if (!deleting) {
+              deleting = true;
+              setTimeout(typeEffect, 1200);
+            } else {
+              deleting = false;
+              roleIndex = (roleIndex + 1) % roles.length;
+              setTimeout(typeEffect, 200);
+            }
+          }
+        }
+        typeEffect();
+    </script>
+}
