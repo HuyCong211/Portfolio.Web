@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\PROJECT\\Portfolio.Web\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3A92FA1C-A1B8-4729-BF9C-898FD053F6DD}|Portfolio.Web\\Portfolio.Web.csproj|d:\\project\\portfolio.web\\portfolio.web\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A92FA1C-A1B8-4729-BF9C-898FD053F6DD}|Portfolio.Web\\Portfolio.Web.csproj|solutionrelative:portfolio.web\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3A92FA1C-A1B8-4729-BF9C-898FD053F6DD}|Portfolio.Web\\Portfolio.Web.csproj|d:\\project\\portfolio.web\\portfolio.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3A92FA1C-A1B8-4729-BF9C-898FD053F6DD}|Portfolio.Web\\Portfolio.Web.csproj|solutionrelative:portfolio.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,12 +19,12 @@
       "RelativeMoniker": "D:0:0:{3A92FA1C-A1B8-4729-BF9C-898FD053F6DD}|Portfolio.Web\\Portfolio.Web.csproj|solutionrelative:portfolio.web\\controllers\\contactcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\PROJECT\\Portfolio.Web\\Portfolio.Web\\Migrations\\20251019184452_InitialPostgres.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Portfolio.Web\\Migrations\\20251019184452_InitialPostgres.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\PROJECT\\Portfolio.Web\\Portfolio.Web\\Migrations\\20251019184302_SyncModels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Portfolio.Web\\Migrations\\20251019184302_SyncModels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3A92FA1C-A1B8-4729-BF9C-898FD053F6DD}|Portfolio.Web\\Portfolio.Web.csproj|d:\\project\\portfolio.web\\portfolio.web\\migrations\\20251019184452_initialpostgres.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3A92FA1C-A1B8-4729-BF9C-898FD053F6DD}|Portfolio.Web\\Portfolio.Web.csproj|solutionrelative:portfolio.web\\migrations\\20251019184452_initialpostgres.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,11 +34,28 @@
       "DocumentGroups": [
         {
           "DockedHeight": 348,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "D:\\PROJECT\\Portfolio.Web\\Portfolio.Web\\Services\\EmailService.cs",
+              "RelativeDocumentMoniker": "Portfolio.Web\\Services\\EmailService.cs",
+              "ToolTip": "D:\\PROJECT\\Portfolio.Web\\Portfolio.Web\\Services\\EmailService.cs",
+              "RelativeToolTip": "Portfolio.Web\\Services\\EmailService.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAmwBgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T20:12:01.583Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "ContactController.cs",
               "DocumentMoniker": "D:\\PROJECT\\Portfolio.Web\\Portfolio.Web\\Controllers\\ContactController.cs",
               "RelativeDocumentMoniker": "Portfolio.Web\\Controllers\\ContactController.cs",
@@ -42,12 +63,11 @@
               "RelativeToolTip": "Portfolio.Web\\Controllers\\ContactController.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAQwBsAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-19T19:30:16.482Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-19T19:30:16.482Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "20251019184452_InitialPostgres.cs",
               "DocumentMoniker": "D:\\PROJECT\\Portfolio.Web\\Portfolio.Web\\Migrations\\20251019184452_InitialPostgres.cs",
               "RelativeDocumentMoniker": "Portfolio.Web\\Migrations\\20251019184452_InitialPostgres.cs",
@@ -55,8 +75,7 @@
               "RelativeToolTip": "Portfolio.Web\\Migrations\\20251019184452_InitialPostgres.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-19T18:44:52.577Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-19T18:44:52.577Z"
             },
             {
               "$type": "Document",
@@ -68,12 +87,11 @@
               "RelativeToolTip": "Portfolio.Web\\Migrations\\20251019184302_SyncModels.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-19T18:43:02.691Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-19T18:43:02.691Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\PROJECT\\Portfolio.Web\\Portfolio.Web\\appsettings.json",
               "RelativeDocumentMoniker": "Portfolio.Web\\appsettings.json",
@@ -81,12 +99,11 @@
               "RelativeToolTip": "Portfolio.Web\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-19T18:33:26.526Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-19T18:33:26.526Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\PROJECT\\Portfolio.Web\\Portfolio.Web\\Program.cs",
               "RelativeDocumentMoniker": "Portfolio.Web\\Program.cs",
@@ -96,10 +113,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-19T18:32:04.247Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             }
           ]
         },

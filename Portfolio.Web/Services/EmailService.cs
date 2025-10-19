@@ -1,62 +1,41 @@
-﻿using Microsoft.Extensions.Configuration;
-using System.Net;
-using System.Net.Mail;
+﻿using System.Net.Http;
+using System.Net.Http.Json;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Configuration;
 
 namespace Portfolio.Web.Services
 {
     public class EmailService
     {
-        private readonly IConfiguration _config;
+        private readonly HttpClient _httpClient;
+        private readonly string? _apiKey;
+        private readonly string? _toEmail;
 
-        public EmailService(IConfiguration config)
+        public EmailService(IConfiguration configuration)
         {
-            _config = config;
+            _httpClient = new HttpClient();
+            _apiKey = configuration["RESEND_API_KEY"];
+            _toEmail = configuration["TO_EMAIL"];
         }
 
         public async Task SendEmailAsync(string name, string fromEmail, string message)
         {
-            try
+            if (string.IsNullOrEmpty(_apiKey) || string.IsNullOrEmpty(_toEmail))
+                throw new InvalidOperationException("Missing RESEND_API_KEY or TO_EMAIL in environment variables.");
+
+            var email = new
             {
-                var settings = _config.GetSection("EmailSettings");
+                from = "Portfolio Contact <onboarding@resend.dev>",
+                to = new[] { _toEmail },
+                subject = $"📩 New message from {name}",
+                html = $"<p><b>Name:</b> {name}</p><p><b>Email:</b> {fromEmail}</p><p>{message}</p>"
+            };
 
-                string smtpServer = settings["SmtpServer"] ?? throw new InvalidOperationException("Missing EmailSettings:SmtpServer");
-                string portStr = settings["Port"] ?? "587";
-                string username = settings["Username"] ?? throw new InvalidOperationException("Missing EmailSettings:Username");
-                string password = settings["Password"] ?? throw new InvalidOperationException("Missing EmailSettings:Password");
-                string toEmail = settings["ToEmail"] ?? username;
-                string fromName = settings["FromName"] ?? "Portfolio Contact";
+            _httpClient.DefaultRequestHeaders.Clear();
+            _httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {_apiKey}");
+            var response = await _httpClient.PostAsJsonAsync("https://api.resend.com/emails", email);
 
-                if (!int.TryParse(portStr, out int port))
-                    port = 587;
-
-                using var client = new SmtpClient(smtpServer, port)
-                {
-                    Credentials = new NetworkCredential(username, password),
-                    EnableSsl = true
-                };
-
-                string subject = $"Liên hệ mới từ {name}";
-                string body = $"<b>Tên:</b> {name}<br><b>Email:</b> {fromEmail}<br><b>Nội dung:</b><br>{message}";
-
-                using var mail = new MailMessage
-                {
-                    From = new MailAddress(username, fromName),
-                    Subject = subject,
-                    Body = body,
-                    IsBodyHtml = true
-                };
-
-                mail.To.Add(toEmail);
-
-                await client.SendMailAsync(mail);
-                Console.WriteLine("✅ Email đã gửi thành công!");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"❌ Lỗi gửi mail: {ex.Message}");
-                throw;
-            }
+            response.EnsureSuccessStatusCode();
         }
     }
 }
