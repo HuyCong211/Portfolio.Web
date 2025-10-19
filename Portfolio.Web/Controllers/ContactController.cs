@@ -25,16 +25,17 @@ namespace Portfolio.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                // Lưu vào database
+                model.SentAt = DateTime.UtcNow; // ✅ Fix lỗi DateTime Local
+
                 _context.ContactMessages.Add(model);
                 await _context.SaveChangesAsync();
 
-                // Gửi email thật
                 await _emailService.SendEmailAsync(model.Name, model.Email, model.Message);
 
                 ViewBag.Success = "✅ Cảm ơn bạn! Tin nhắn đã được gửi và lưu thành công 🎉";
                 ModelState.Clear();
             }
+
             return View();
         }
         [Route("test-mail")]

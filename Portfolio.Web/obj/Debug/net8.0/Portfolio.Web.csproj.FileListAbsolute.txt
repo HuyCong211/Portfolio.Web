@@ -170,3 +170,5 @@ D:\PROJECT\Portfolio.Web\Portfolio.Web\bin\Debug\net8.0\runtimes\win\lib\net6.0\
 D:\PROJECT\Portfolio.Web\Portfolio.Web\obj\Debug\net8.0\Portfolio.Web.csproj.AssemblyReference.cache
 D:\PROJECT\Portfolio.Web\Portfolio.Web\obj\Debug\net8.0\Portfoli.3BFC0969.Up2Date
 D:\PROJECT\Portfolio.Web\Portfolio.Web\obj\Debug\net8.0\Portfolio.Web.sourcelink.json
+D:\PROJECT\Portfolio.Web\Portfolio.Web\bin\Debug\net8.0\Npgsql.dll
+D:\PROJECT\Portfolio.Web\Portfolio.Web\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
