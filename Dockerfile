@@ -1,17 +1,22 @@
-﻿# ===== BUILD STAGE =====
+# =========================
+# Build stage
+# =========================
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-WORKDIR /app
+WORKDIR /src
 
-# Copy csproj and restore
-COPY *.csproj ./
-RUN dotnet restore
+# Copy the .csproj and restore
+COPY Portfolio.Web/Portfolio.Web.csproj ./Portfolio.Web/
+RUN dotnet restore "./Portfolio.Web/Portfolio.Web.csproj"
 
-# Copy everything and build
+# Copy everything else and build
 COPY . .
-RUN dotnet publish -c Release -o out
+WORKDIR /src/Portfolio.Web
+RUN dotnet publish -c Release -o /app/out
 
-# ===== RUNTIME STAGE =====
-FROM mcr.microsoft.com/dotnet/aspnet:8.0
+# =========================
+# Runtime stage
+# =========================
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app
 COPY --from=build /app/out .
 EXPOSE 8080
