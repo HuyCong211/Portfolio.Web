@@ -172,3 +172,12 @@ D:\PROJECT\Portfolio.Web\Portfolio.Web\obj\Debug\net8.0\Portfoli.3BFC0969.Up2Dat
 D:\PROJECT\Portfolio.Web\Portfolio.Web\obj\Debug\net8.0\Portfolio.Web.sourcelink.json
 D:\PROJECT\Portfolio.Web\Portfolio.Web\bin\Debug\net8.0\Npgsql.dll
 D:\PROJECT\Portfolio.Web\Portfolio.Web\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+D:\PROJECT\Portfolio.Web\Portfolio.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\PROJECT\Portfolio.Web\Portfolio.Web\bin\Debug\net8.0\Microsoft.AspNetCore.DataProtection.dll
+D:\PROJECT\Portfolio.Web\Portfolio.Web\bin\Debug\net8.0\Microsoft.AspNetCore.DataProtection.Abstractions.dll
+D:\PROJECT\Portfolio.Web\Portfolio.Web\bin\Debug\net8.0\Microsoft.AspNetCore.DataProtection.EntityFrameworkCore.dll
+D:\PROJECT\Portfolio.Web\Portfolio.Web\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+D:\PROJECT\Portfolio.Web\Portfolio.Web\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
+D:\PROJECT\Portfolio.Web\Portfolio.Web\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
+D:\PROJECT\Portfolio.Web\Portfolio.Web\bin\Debug\net8.0\System.Security.Cryptography.Xml.dll
+D:\PROJECT\Portfolio.Web\Portfolio.Web\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll

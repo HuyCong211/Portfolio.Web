@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Portfolio.Web.Data;
 using Portfolio.Web.Services;
+using Microsoft.AspNetCore.DataProtection;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,11 +13,14 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+builder.Services.AddDataProtection()
+    .PersistKeysToDbContext<AppDbContext>();
+
 builder.Services.AddTransient<EmailService>();
 
 var app = builder.Build();
 
-// --- Thêm đoạn này: tự migrate database khi khởi động ---
+// ---  tự migrate database khi khởi động ---
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
@@ -40,5 +45,6 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+app.Urls.Add("http://0.0.0.0:" + (Environment.GetEnvironmentVariable("PORT") ?? "5000"));
 
 app.Run();

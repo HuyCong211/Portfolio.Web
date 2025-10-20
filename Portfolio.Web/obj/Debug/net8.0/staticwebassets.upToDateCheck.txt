@@ -1,5 +1,11 @@
-wwwroot\js\loader.js
+wwwroot\css\site.css
+wwwroot\CV\CV_NguyenHuyCong_TTS_NET(EN).pdf
+wwwroot\CV\ENG_CV_NguyenHuyCong_Intern_Web_Developer_NET.pdf
 wwwroot\favicon.ico
+wwwroot\img\profile.jpg
+wwwroot\img\projects\Portfolio.png
+wwwroot\img\projects\WebBanHang.png
+wwwroot\js\loader.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
@@ -58,7 +64,3 @@ wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map
 wwwroot\lib\jquery\LICENSE.txt
-wwwroot\CV\ENG_CV_NguyenHuyCong_Intern_Web_Developer_NET.pdf
-wwwroot\css\site.css
-wwwroot\img\projects\WebBanHang.png
-wwwroot\img\profile.jpg
