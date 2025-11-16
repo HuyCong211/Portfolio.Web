@@ -1,4 +1,5 @@
 wwwroot\css\site.css
+wwwroot\CV\CV_INTERN_PM_IT_NGUYEN_HUY_CONG_EN.pdf
 wwwroot\CV\CV_NguyenHuyCong_TTS_NET(EN).pdf
 wwwroot\CV\ENG_CV_NguyenHuyCong_Intern_Web_Developer_NET.pdf
 wwwroot\favicon.ico
